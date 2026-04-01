@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculator</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="dark-mode">
+
+        <div class="calculator">
+            <div class="theme-toggle">
+                <button onclick="toggleTheme()">Toggle Light/Dark Mode</button>
+            </div>
+
+            <div class="display">
+                <div id="history">0</div>
+                <div id="result">0</div>
+            </div>
+
+            <div class="keypad">
+
+                <div class="standard">
+                    <button class="btn gray" onclick="clearEntry()">CE</button>
+                    <button class="btn gray" onclick="clearAll()">C</button>
+                    <button class="btn gray" onclick="backspace()">←</button>
+                    <button class="btn orange" onclick="setOperator('÷')">÷</button>
+
+                    <button class="btn darker" onclick="appendNumber('7')">7</button>
+                    <button class="btn darker" onclick="appendNumber('8')">8</button>
+                    <button class="btn darker" onclick="appendNumber('9')">9</button>
+                    <button class="btn orange" onclick="setOperator('x')">x</button>
+
+                    <button class="btn darker" onclick="appendNumber('4')">4</button>
+                    <button class="btn darker" onclick="appendNumber('5')">5</button>
+                    <button class="btn darker" onclick="appendNumber('6')">6</button>
+                    <button class="btn orange" onclick="setOperator('-')">-</button>
+
+                    <button class="btn darker" onclick="appendNumber('1')">1</button>
+                    <button class="btn darker" onclick="appendNumber('2')">2</button>
+                    <button class="btn darker" onclick="appendNumber('3')">3</button>
+                    <button class="btn orange" onclick="setOperator('+')">+</button>
+
+                    <button class="btn darker" onclick="toggleSign()">+/-</button>
+                    <button class="btn darker" onclick="appendNumber('0')">0</button>
+                    <button class="btn darker" onclick="appendDecimal()">.</button>
+                    <button class="btn orange" onclick="calculate()">=</button>
+                </div>
+
+                <div class="scientific">
+                    <button class="btn gray" onclick="scientific('sin')">sin</button>
+                    <button class="btn gray" onclick="scientific('asin')">sin⁻¹</button>
+                    <button class="btn gray" onclick="scientific('fact')">n!</button>
+                    <button class="btn orange" onclick="scientific('ln')">ln</button>
+
+                    <button class="btn darker" onclick="scientific('cos')">cos</button>
+                    <button class="btn darker" onclick="scientific('acos')">cos⁻¹</button>
+                    <button class="btn darker" onclick="setOperator('P')">nPr</button>
+                    <button class="btn orange" onclick="scientific('log')">log₁₀</button>
+
+                    <button class="btn darker" onclick="scientific('tan')">tan</button>
+                    <button class="btn darker" onclick="scientific('atan')">tan⁻¹</button>
+                    <button class="btn darker" onclick="setOperator('C')">nCr</button>
+                    <button class="btn orange" onclick="appendConstant('π')">π</button>
+
+                    <button class="btn darker" onclick="scientific('sq')">x²</button>
+                    <button class="btn darker" onclick="setOperator('^')">xʸ</button>
+                    <button class="btn darker" onclick="scientific('exp')">eˣ</button>
+                    <button class="btn orange" onclick="appendConstant('e')">e</button>
+
+                    <button class="btn darker" onclick="appendBracket('(')">(</button>
+                    <button class="btn darker" onclick="appendBracket(')')">)</button>
+                    <button class="btn darker" onclick="scientific('sqrt')">√</button>
+                    <button class="btn orange" onclick="scientific('percent')">%</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="calcu.js"></script>
+</body>
+</html>

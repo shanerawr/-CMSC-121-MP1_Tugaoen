@@ -1,0 +1,108 @@
+:root {
+    --bg-color: #000000;
+    --calc-bg: rgba(16, 12, 56, 0.5);
+    --display-bg: #ffffff;
+    --btn-default: #c9bfb5; 
+    --btn-text: black;
+    --orange: #7d5683;
+    --gray: #402158;
+    --bg-image: url('darkmode.jpg');
+}
+
+body.light-mode {
+    --bg-color: #3287D1;
+    --calc-bg: rgba(50, 135, 209, 0.1);
+    --display-bg: #f8f8f8;
+    --btn-default: #c9bfb5; 
+    --orange: #7DA33A;
+    --gray: #288b0a;
+    --btn-text: #000000;
+    --bg-image: url('lightmode.jpg');
+}
+
+body {
+    background-color: var(--bg-color);
+    background-image: var(--bg-image);
+    background-size: cover;       
+    background-position: center;  
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    transition: background 0.3s ease-in-out;
+}
+
+.calculator {
+    background: var(--calc-bg);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    border: 1px solid #444;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+} 
+
+.display {
+   background-color: var(--display-bg);
+    color: #000;
+    text-align: right;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.keypad { 
+    display: flex; 
+    gap: 20px; 
+}
+
+.standard, .scientific {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+}
+
+.btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--btn-default); 
+    color: var(--btn-text);              
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.orange {
+    background-color: var(--orange);
+    color: white;
+}
+
+.gray {
+    background-color: var(--gray);
+    color: white;
+}
+
+.btn.darker {
+    background-color: var(--btn-default);
+    color: var(--btn-text);
+}
+
+#history {
+    font-size: 0.9rem;
+    color: gray;
+}
+
+#result {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Mobile Responsiveness Fix */
+@media (max-width: 650px) {
+    .keypad {
+        flex-direction: column;
+    }
+}
